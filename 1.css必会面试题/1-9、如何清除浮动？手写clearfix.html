@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+    } */
+
+    /* 清除浮动 */
+    .clear {
+        clear: both;
+    }
+
+    .box {
+        /* 清除浮动 */
+        /* overflow: hidden; */
+        /* float: left; */
+        width: 500px;
+        margin: 50px auto;
+        border: 5px solid red;
+    }
+
+    .left {
+        width: 200px;
+        /* 脱离文档流了，父级当它不存在，所以父级的高度就收上去了 */
+        float: left;
+        height: 200px;
+        background-color: #ccc;
+    }
+</style>
+
+<body>
+    <div class="box clearfix">
+        <div class="left">left</div>
+        <!-- 在父级浮动元素的最后面加上class名字为clear的div -->
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

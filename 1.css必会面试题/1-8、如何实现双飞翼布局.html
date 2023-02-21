@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        overflow: hidden;
+    }
+
+    .item {
+        color: #fff;
+        float: left;
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+        /* 方便调试 */
+        background-color: #ccc;
+    }
+
+    .content {
+        height: 200px;
+        /* 要给中间内容部分设置margin，而不是外层 */
+        margin-left: 200px;
+        margin-right: 150px;
+        background-color: green;
+    }
+
+    .left-item {
+        width: 200px;
+        /* 和container是同级，肯定会跑到container的最左面 */
+        margin-left: -100%;
+        background-color: red;
+    }
+
+    .right-item {
+        width: 150px;
+        /* 和container是同级，right-item是多宽往前走多少就可以了 */
+        margin-left: -150px;
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <!-- 中间内容区域要嵌套两层 -->
+        <div class="container item">
+            <!-- 实际内容部分 -->
+            <div class="content">@包子枫的枫-bilibili</div>
+        </div>
+        <div class="left-item item">left-item</div>
+        <div class="right-item item">right-item</div>
+    </div>
+</body>
+
+</html>

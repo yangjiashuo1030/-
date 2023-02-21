@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        overflow: hidden;
+        padding-left: 200px;
+        padding-right: 150px;
+        background-color: #ccc;
+    }
+
+    .item {
+        color: #fff;
+        font-size: 20px;
+        float: left;
+    }
+
+    .content {
+        width: 100%;
+        height: 200px;
+        background-color: green;
+    }
+
+    .left-item {
+        width: 200px;
+        /* 将margin-left设置成-100%会跑到父级内容的最左边 */
+        margin-left: -100%;
+        /* 相对定位：在文档流内对其他元素不造成影响 */
+        position: relative;
+        right: 200px;
+        background-color: red;
+    }
+
+    .right-item {
+        width: 150px;
+        /* 给一个元素设置marign负值就是减少多少，认为宽度减少了就跑到上面去了 */
+        margin-right: -150px;
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="content item">@包子枫的枫-bilibili</div>
+        <div class="left-item item">left-item</div>
+        <div class="right-item item">right-item</div>
+    </div>
+</body>
+
+</html>
