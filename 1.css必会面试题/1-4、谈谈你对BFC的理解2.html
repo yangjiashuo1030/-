@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+        margin: 20px;
+    }
+
+    .box {
+        overflow: hidden;
+        /* 面试可以这么答，平常开发不要用 */
+        /* display: inline-block; */
+        background: black;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <section class="left">left</section>
+        <section class="right">right</section>
+    </div>
+</body>
+
+</html>

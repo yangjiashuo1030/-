@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 盒子模型大小=width(宽)+padding(内边距)+border(边框)=200+20+10 */
+    div {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        border: 5px solid red;
+        background-color: sandybrown;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div id="div1">包子枫的枫 - bilibili</div>
+    <script>
+        var w = document.getElementById("div1").offsetWidth;
+        console.log(w);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* * {
+        color: red;
+    }
+
+    span {
+        color: green;
+    }
+
+    .span1 {
+        color: blue !important;
+    }
+
+    #span1 {
+        color: blueviolet;
+    } */
+
+    /* 继承的永远没有直接给的优先级大 */
+    /* #div1 {
+        color: red;
+    }
+
+    span {
+        color: green;
+    } */
+
+
+    /* #div1 .span1 {
+        color: red;
+    } */
+
+    /* 
+    1.优先级一样时下面的代码会将上面的代码覆盖
+    2.伪类=class
+    3.important! > 行间样式 > id > class > 标签 > 通配符
+    */
+    .div1 .p1 .span1 {
+        color: green;
+    }
+
+    .div1 .p1 .span1:hover {
+        color: blue;
+    }
+
+    .div1 .span1:hover {
+        color: blue;
+    }
+
+
+    /* 优先级计算方法
+        行间  id   class  标签
+        A     B    C      D  
+        0     1    1      0       #div1 .span1
+        0     0    3      0       .div1 .p1 .span1
+    */
+</style>
+
+<body>
+    <div id="div1" class="div1">
+        <p id="p1" class="p1">
+            <span id="span1" class="span1">
+                123456789
+            </span>
+        </p>
+    </div>
+</body>
+
+</html>
